@@ -22,7 +22,7 @@ class App extends React.Component {
         } else if(!this.state.errorMessage && this.state.lat) {
             return <SeasonDisplay lat={this.state.lat}/>;
         } else {
-            return <h1>Loading...</h1>;
+            return <h1><i class="big notched circle loading icon"></i></h1>;
         }
     }  
 }
