@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 import SeasonDisplay from './components/seasonDisplay';
+import LoadingSpinner from './components/loadingSpiner';
 
 class App extends React.Component {
     state = {
@@ -22,7 +24,7 @@ class App extends React.Component {
         } else if(!this.state.errorMessage && this.state.lat) {
             return <SeasonDisplay lat={this.state.lat}/>;
         } else {
-            return <h1><i class="big notched circle loading icon"></i></h1>;
+            return<div><LoadingSpinner /></div>;
         }
     }  
 }
